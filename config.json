@@ -1,0 +1,13 @@
+{
+    "exchange": "kraken",
+    "ohlcApiURL": "https://api.kraken.com/0/public/OHLC",
+    "tradingPair": "XETHZEUR",
+    "interval": 1440,
+    "mongoUrl": "mongodb://localhost:27017/",
+    "mongoDbName": "kraken_ohlc_db",
+    "mongoCollectionName": "OHLC",
+    "settings": [
+        "=[tor.start]",
+        "=[copp.start]"
+    ]
+}
