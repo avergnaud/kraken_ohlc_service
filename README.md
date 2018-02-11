@@ -1,5 +1,7 @@
 # TODO
 
+étude pour mono-repo, utilisation de https://www.npmjs.com/package/avergnaud-ohlc côté serveur
+
 https://api.kraken.com/0/public/OHLC?pair=XETHZEUR&interval=1440&since=1517443200
 
 kraken_ohlc_db
