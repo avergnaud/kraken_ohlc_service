@@ -20,9 +20,11 @@ let sinceParameter: string ="";
 getApiRequestUrl()
   .then(function(url) {
     console.log("calling " + url);
+    /* etape 2 : récupération des données de marché */
     return retrieveMarketData(url);
   })
   .then(function(body) {
+    /* étape 3 : insertion des données en base mongo */
     insertOHLC(body);
   })
   .catch(error => console.log(error));
