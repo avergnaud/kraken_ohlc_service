@@ -8,4 +8,9 @@ export default interface Config
     mongoDbName: string
     mongoCollectionName: string
     settings: string[]
+    serverHost: string
+    serverPort: number
+    serverApiRoot: string
+    serverApiOhlcgraph: string
+    serverApiOhlcgraphType: string
 }

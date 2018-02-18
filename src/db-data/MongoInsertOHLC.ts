@@ -1,7 +1,8 @@
 import * as path from "path";
 import * as https from "https";
 import * as mongodb from "mongodb";
-import OHLC from "avergnaud-ohlc";
+// import OHLC from "avergnaud-ohlc";
+import * as monorepo from "avergnaud-ohlc";
 
 import Config from "../configuration/Config";
 //possible de remplacer le require ?
@@ -26,7 +27,7 @@ export default function insertOHLC(body): Promise<boolean> {
       }
       let mongoDbName = db.db(config.mongoDbName);
       for (const arrValue of body.result.XETHZEUR) {
-        let ohlc: OHLC = mapKrakenTableElementToMongoDocument(arrValue);
+        let ohlc: monorepo.OHLC = mapKrakenTableElementToMongoDocument(arrValue);
 
         mongoDbName
           .collection(config.mongoCollectionName)
@@ -42,8 +43,8 @@ export default function insertOHLC(body): Promise<boolean> {
   });
 }
 
-function mapKrakenTableElementToMongoDocument(krakenTableElement): OHLC {
-  let ohlc: OHLC = {
+function mapKrakenTableElementToMongoDocument(krakenTableElement): monorepo.OHLC {
+  let ohlc: monorepo.OHLC = {
     exchange: config.exchange,
     currencyPair: config.tradingPair,
     interval: config.interval,

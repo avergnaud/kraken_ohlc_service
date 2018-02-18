@@ -9,5 +9,10 @@
     "settings": [
         "=[tor.start]",
         "=[copp.start]"
-    ]
+    ],
+    "serverHost": "http://localhost",
+    "serverPort": 3001,
+    "serverApiRoot": "/api",
+    "serverApiOhlcgraph" : "/api/ohlcgraph",
+    "serverApiOhlcgraphType" : "/api/serverApiOhlcgraph/Type"
 }
